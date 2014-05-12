@@ -1,0 +1,8 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET        /messages/list       controllers.MessagesController.list
+GET        /messages/add       controllers.MessagesController.add(author: String, body: String)
+
+    
