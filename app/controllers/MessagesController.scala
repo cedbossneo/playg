@@ -37,4 +37,9 @@ object MessagesController extends Controller with MongoController{
     // when the insert is performed, send a OK 200 result
     futureResult.map(_ => Ok)
   }
+
+  def delete(author: String) = Action.async {
+    val futureResult = collection.remove(Json.obj("author" -> author))
+    futureResult.map(_ => Ok)
+  }
 }

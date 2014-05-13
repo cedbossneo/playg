@@ -4,5 +4,6 @@
 
 GET        /messages/list       controllers.MessagesController.list
 GET        /messages/add       controllers.MessagesController.add(author: String, body: String)
+GET        /messages/delete       controllers.MessagesController.delete(author: String)
 
     
